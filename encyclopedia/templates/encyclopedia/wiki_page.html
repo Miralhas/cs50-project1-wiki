@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+
+{% block body %}
+    {{markdown |safe }}
+    <form action="">
+        <a href="/update_wiki/{{title}}">Edit</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %} 
+Search
+{% endblock %}
+
+{% block body %}
+    <h1 style="color: red;">Error!</h1>
+    {% if wiki_pages %}
+        <p>Pesquisas Similares:</p>
+    {% endif %}
+    <ul>
+        {% for page in wiki_pages %}
+        <li><a href="/wiki/{{ page }}">{{ page }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

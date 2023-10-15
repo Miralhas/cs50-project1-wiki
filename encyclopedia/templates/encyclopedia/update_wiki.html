@@ -1,0 +1,21 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block body %}
+    <h1>Update Wiki</h1>
+
+    <form action="{% url 'wiki:update_wiki' title %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="wiki_title">Wiki Title:</label>
+            <input type="text" id="wiki_title" name="wiki_title" value="{{title}}" readonly="readonly">
+        </div>
+        <br>
+        <div><textarea name="wiki_content" id="wiki_content" cols="30" rows="10">{{content}}</textarea></div>
+   
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    {% endblock %}
