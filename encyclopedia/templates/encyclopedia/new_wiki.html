@@ -7,9 +7,18 @@
 
     <form action="{% url 'wiki:add_wiki' %}" method="post">
         {% csrf_token %}
-        <label for="id_wiki_title">Wiki Title:</label>
-        {{ form }}
-        
+        {% for field in form %}
+            {% if field.name == 'wiki_title' %}
+                <div>
+                    <label for="id_wiki_title"> Wiki Title: </label>
+                    {{ field }}
+                </div>
+            {% else %}
+                {{ field }}
+            {% endif %}
+            <br>
+        {% endfor %}
+
         <div>
             <input type="submit" name="" id="">
         </div>

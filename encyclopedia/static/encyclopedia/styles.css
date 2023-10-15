@@ -14,7 +14,7 @@ h1 {
 
 textarea {
     height: 50vh;
-    width: 80%;
+    width: 10%;
 }
 
 .main {
@@ -36,7 +36,3 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
-/* 
-.new-wiki{
-    width: 400px;
-} */

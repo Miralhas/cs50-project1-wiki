@@ -17,11 +17,7 @@ class NewSearchForms(forms.Form):
     )
 
 class NewWikiForms(forms.Form):
-    wiki_title = forms.CharField(label=False, widget=forms.TextInput())
-    wiki_content = forms.CharField(label=False, widget=forms.Textarea())
-
-class UpdateWikiForms(forms.Form):
-    wiki_title = forms.CharField(label=False)
+    wiki_title = forms.CharField()
     wiki_content = forms.CharField(label=False, widget=forms.Textarea())
 
 
